@@ -1,3 +1,64 @@
+# CHIPS Core
+
+### Step 1: Clone CHIPS source
+
+```bash
+cd ~
+git clone https://https://github.com/chips-blockchain/chips
+cd chips
+git checkout master
+./build.sh
+```
+
+### Step 2: Create CHIPS data dir, `chips.conf` file and restrict access to it
+
+```bash
+cd ~
+mkdir .chips
+nano ~/.chips/chips.conf
+```
+
+Insert the following contents inside the `chips.conf` file and save it. (change the `rpcuser` and `rpcpassword` values)
+
+```bash
+server=1
+daemon=1
+txindex=1
+rpcuser=<your user>
+rpcpassword=<your password>
+addnode=159.69.23.29
+addnode=95.179.192.102
+addnode=149.56.29.163
+addnode=145.239.149.173
+addnode=178.63.53.110
+addnode=151.80.108.76
+addnode=185.137.233.199
+rpcbind=127.0.0.1
+rpcallowip=127.0.0.1
+```
+
+Restrict access to the `chips.conf` file
+
+```bash
+chmod 600 ~/.chips/chips.conf
+```
+
+### Step 3: Start CHIPSD
+
+```bash
+cd ~
+cd chips/src
+./chipsd &
+```
+
+### Preview block download status
+
+```bash
+cd ~
+cd .chips
+tail -f debug.log
+```
+
 Bitcoin Core integration/staging tree
 =====================================
 
