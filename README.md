@@ -4,7 +4,7 @@
 
 ```bash
 cd ~
-git clone https://https://github.com/chips-blockchain/chips
+git clone https://github.com/chips-blockchain/chips
 cd chips
 git checkout master
 ./build.sh
