@@ -44,7 +44,7 @@ The paths are automatically configured and no other options are needed unless ta
 
 #### For macOS cross compilation
 
-    sudo apt-get install curl librsvg2-bin libtiff-tools bsdmainutils cmake imagemagick libcap-dev libz-dev libbz2-dev python3-setuptools libtinfo5
+    sudo apt-get install curl librsvg2-bin libtiff-tools bsdmainutils cmake imagemagick libcap-dev libz-dev libbz2-dev python3-setuptools libtinfo5 xorriso
 
 #### For Win64 cross compilation
 
@@ -94,6 +94,7 @@ The following can be set when running make: `make FOO=bar`
 - `NO_BDB`: Don't download/build/cache BerkeleyDB
 - `NO_SQLITE`: Don't download/build/cache SQLite
 - `NO_UPNP`: Don't download/build/cache packages needed for enabling UPnP
+- `NO_NATPMP`: Don't download/build/cache packages needed for enabling NAT-PMP</dd>
 - `ALLOW_HOST_PACKAGES`: Packages that are missed in dependencies (due to `NO_*` option or
   build script logic) are searched for among the host system packages using
   `pkg-config`. It allows building with packages of other (newer) versions
